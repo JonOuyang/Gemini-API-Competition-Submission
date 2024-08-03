@@ -2,7 +2,7 @@
 A next generation AI Personal Assistant, fully powered by Google Gemini
 
 ## What is Jayu?
-Jayu is a an AI personal assistant that takes inspiration from the popular assistant Siri, and inspiration from the all powerful assistant Jarvis from Iron Man. Using the Google Gemini API, Jayu aims to bridge the gap between reality and fiction, giving the term "personal assistant" a new meaning. Jayu's purpose is to make the lives of users easier than ever before, with new capabilities and accessibility everywhere.
+Jayu is a an AI personal assistant that takes inspiration from the all powerful assistant Jarvis from Iron Man. Using the Google Gemini API, Jayu aims to bridge the gap between reality and fiction, giving the term "personal assistant" a new meaning. Jayu's purpose is to make the lives of users easier than ever before, with new capabilities and accessibility everywhere.
 
 ## What can Jayu do?
 Jayu is powered by Google Gemini Pro, Flash, and Vision, which allows Gemini to act both as a LLM and VLM. Utilizing these capabilities, Jayu can:
