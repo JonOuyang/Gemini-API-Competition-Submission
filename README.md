@@ -24,10 +24,15 @@ The idea of an AI having access to one's screen is very dangerous. Here's what w
 - Jayu does NOT have access to files on the computer. Jayu does NOT have access to the terminal or powershell or any sort of command line UNLESS the user opens it and commands Jayu to assist.
 - Jayu is ONLY capable of looking on screen when the user prompts it to do so. It will only take a screenshot of the current window for analysis after every function execution cycle internally. In other words, Jayu does not record the screen.
 
+
 - Jayu does NOT retain any information between sessions.
 - Jayu does NOT utilize any sort of database for the reason of security. ALL information is stored locally in python variables.
 - All screenshots of user's current active screen is stored locally in python variables using the computer vision library Pillow (PIL). These images are passed along with prompts to the Gemini API. No screenshots are saved besides this.
-- Speech to Text capabilities are powered by the python library RealtimeSTT. All recordings are stored and processed locally in python and no speech is remembered between sessions. While RealtimeSTT technically actively listens, all speech is processed in real time and immediately forgotten if the wakeword "Hey Gemini" is not used. Only the immediate prompt following the wakeword is stored in a variable, which is immediately wiped after execution is complete. 
+- Speech to Text capabilities are powered by the python library RealtimeSTT. All recordings are stored and processed locally in python and no speech is remembered between sessions. While RealtimeSTT technically actively listens, all speech is processed in real time and immediately forgotten if the wakeword "Hey Gemini" is not used. Only the immediate prompt following the wakeword is stored in a variable, which is immediately wiped after execution is complete.
+
+
+- Gesture recognition is powered by mediapipe and opencv. While it uses your camera to see your hands, the camera footage is NOT sent to Google Gemini for processing. All processing is done locally within the script itself. When we say "Jayu" is capable of gesture recognition, gesture recognition is a feature of Jayu. It is not a feature of Google Gemini. Google will not see your person unless you literally command Gemini to look at your screen and look at a screenshot of yourself.
+- The computer's camera is NOT connected to the Gemini pipeline. In other words, Google Gemini is quite literally unable to ever use your camera.
 
 ALL code for Jayu is publically available in this repository. Feel free to disable specific functions.
 
