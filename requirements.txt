@@ -20,3 +20,4 @@ keyboard
 enum
 beautifulsoup4
 selenium
+python-dotenv
