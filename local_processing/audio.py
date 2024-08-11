@@ -34,8 +34,7 @@ def tts_speak(text: str):
   text = text.replace('\\b', '\b')
   text = text.replace('\\f', '\f') 
   print(f'Gemini: {text}')
-  """
-  # re-indent this later to be in the tts_speak function
+
   global audioPlayer
   data = {
     "text": text,
@@ -46,22 +45,17 @@ def tts_speak(text: str):
     }
   }
   response = requests.post(url, json=data, headers=headers, stream=True)
-  print('phase 1')
   if response.status_code == 200:
-    with open('test.mp3', 'wb') as f:
+    with open('JayuAudio.mp3', 'wb') as f:
       for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
           if chunk:
               f.write(chunk)
   else:
     print('call failed')
-  print('Attempting to play sound...')
 
   # WARNING: THIS REQUIRES SOME FUNCTION IN THE CODE TO BE CONSTANTLY RUNNING IN THE BACKGROUND, THIS EXECUTION IS INSTANT
-  audioPlayer = vlc.MediaPlayer("test.mp3")
+  audioPlayer = vlc.MediaPlayer("JayuAudio.mp3")
   audioPlayer.play()
-  #time.sleep(10) #temporary to play full audio. this can be removed later with continuous runtime
-  
-  """
 
 def stop_speaking():
   """Function to stop the running auditory feedback. This function should be called when you want to stop talking and listen to the user
