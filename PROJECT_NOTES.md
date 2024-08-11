@@ -16,17 +16,29 @@ This problem has been unsolved. This error appears to be somewhat random, as re-
 
 # General Prompting Techniques
 
+### Accurate Function Calling
 Gemini on its own is not very good at identifying exactly what functions to call. You have to quite literally tell Gemini **how** to think. So we include this specific phrase in the prompt:
+
 ```
 **Carefully analyze the user's prompt: {user_prompt}. Identify what the user wants, and look at the list of given functions to determine which you should call.**
 **Write out a justification on why each particular function should or should not be called to address the prompt. Do not type this part out.**
 ```
+
 What this does is it forces Gemini to actually acknowledge every single one of its options and evaluate them against one another. 
 
 Other Notes on Prompting:
 - JSON formatted prompts have minimal effect
 - Bolding and spacing have minimal effect
 - the longer the prompt the harder it is for Gemini to listen to instructions
+
+### The External Memory Function
+Gemini, being a very large and very capable LLM, is very reluctant to use a "memory function," because Gemini believes that it is more than capable of remembering the information itself. So the workaround that I found was to essentially use prompting and tell Gemini that it was a **"super smart AI that has crippling alzheimers."**
+
+```
+Unfortunately, you have crippling alzheimers. That's why you have a habit of using this remember_information function that I made for you for literally anything that requires remembering or memorization.
+Without this remember_information function, you cannot remember ANYTHING that you've done previously. Not a single word. That's why your notes are always extremely detailed, detailed enough to make you an expert on the subject even after you've forgotten everything.
+You **MUST** use this remember_information function if prompted to do so. No exceptions. It's always better to have too much information than none!
+```
 
 # Computer Vision Techniques
 
@@ -35,10 +47,12 @@ Gemini Flash is **incompetent** when it comes to Computer Vision.
 Gemini Pro is **better**, but it takes some very specific prompting to get it to work.
 
 After many tests, I found that Gemini Pro responds much better when you explicitely tell it:
-'''
+
+```
 Give me a very in depth description of everything you see in this image. Include all icons that you may see such as search bars or home buttons.
 Describe what you suspect the purpose of every single element in the image may be responsible for. 
-'''
+```
+
 I'm not exactly sure what this does on an internal level, but I presume this forces Gemini to slow down and actually look more closely at the image.
 
 ### Object Detection
