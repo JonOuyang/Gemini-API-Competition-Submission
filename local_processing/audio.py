@@ -1,11 +1,12 @@
-import logging
 import os
 import requests
-import time
 import vlc
+import logging
+import threading
+import time
 
+logging.basicConfig(level=logging.ERROR)
 from dotenv import load_dotenv
-from RealtimeSTT import AudioToTextRecorder  
 
 # Load API keys
 load_dotenv()
@@ -17,6 +18,11 @@ headers = {
   "Content-Type": "application/json",
   "xi-api-key": os.getenv("ELEVENLABS_API_KEY") # 11labs api key
 }
+
+def play_audio():
+  audioPlayer = vlc.MediaPlayer("JayuAudio.mp3")
+  audioPlayer.play()
+  time.sleep(audioPlayer.get_length()/1000+1)
 
 def tts_speak(text: str):
   """Verbally tell something to the user
@@ -53,9 +59,9 @@ def tts_speak(text: str):
   else:
     print('call failed')
 
-  # WARNING: THIS REQUIRES SOME FUNCTION IN THE CODE TO BE CONSTANTLY RUNNING IN THE BACKGROUND, THIS EXECUTION IS INSTANT
-  audioPlayer = vlc.MediaPlayer("JayuAudio.mp3")
-  audioPlayer.play()
+  audio_thread = threading.Thread(target=play_audio)
+  audio_thread.start()
+  audio_thread.join()
 
 def stop_speaking():
   """Function to stop the running auditory feedback. This function should be called when you want to stop talking and listen to the user
