@@ -1,6 +1,7 @@
 beautifulsoup4
 enum34
 google
+google-generativeai
 keyboard
 requests
 mediapipe
