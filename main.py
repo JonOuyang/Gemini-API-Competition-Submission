@@ -17,8 +17,8 @@ from gemini_interactive.screen import (look_at_screen_and_respond,
                                        watch_screen_and_respond, start_interact_with_screen, 
                                        memoryText, memoryImage)
 from local_processing.audio import tts_speak
-# from local_processing.gesture import infiniteGestureWatch
-# from RealtimeSTT import AudioToTextRecorder
+from local_processing.gesture import infiniteGestureWatch
+from RealtimeSTT import AudioToTextRecorder
 
 # Load API keys
 load_dotenv()
@@ -206,11 +206,9 @@ except Exception as unknownError:
     sys.exit(1)
 
 if __name__ == '__main__':
-    # Gesture Recognition temporarily disabled for debugging purposes
-    # gestureProcess = multiprocessing.Process(target=infiniteGestureWatch)
-    # gestureProcess.daemon = True
-    # gestureProcess.start()
+    gestureProcess = multiprocessing.Process(target=infiniteGestureWatch)
+    gestureProcess.daemon = True
+    gestureProcess.start()
 
-    # rec = AudioToTextRecorder(spinner=False, model="tiny.en", language="en")
-    # active_listen(recorder=rec) #creates recorder instance and starts listening 
-    # look_at_screen_and_respond('what color is my screen?')
+    rec = AudioToTextRecorder(spinner=False, model="tiny.en", language="en")
+    active_listen(recorder=rec) #creates recorder instance and starts listening 
