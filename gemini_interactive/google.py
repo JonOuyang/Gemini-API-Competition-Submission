@@ -82,9 +82,9 @@ def extract_elements(html_content):
     extracted_elements = 'The title of the page that is currently open is: ' + driver.title + '\nThe link to the page that is currently open is ' + driver.current_url + "\n"
     for element in soup.descendants:
         if isinstance(element, str) and element.strip() and element.parent.name not in ['script', 'noscript', 'template', 'style']:  # Get text nodes
-            extracted_elements += f'HTML Element Tag: <{element.parent.name}>. Text: {element.strip()}\n'
+            extracted_elements += f"HTML Element Tag: <{element.parent.name}>. Text: {element.strip()}\n"
         elif element.name == 'a' and (element.has_attr('href') or element.parent.name in ['link']) and len(element.get('href')) > 8:  # Get links
-            extracted_elements += f'\nLink (href or url): {element.get('href')} - This link is very likely related to the text in adjacent indices, try looking at them and finding correlation\n\n'
+            extracted_elements += f"\nLink (href or url): {element.get('href')} - This link is very likely related to the text in adjacent indices, try looking at them and finding correlation\n\n"
 
     return extracted_elements
 
