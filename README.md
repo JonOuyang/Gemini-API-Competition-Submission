@@ -42,22 +42,22 @@ ALL code for Jayu is publically available in this repository. Feel free to disab
 For easiest installation, I recommend using Windows operating system. You will likely run into issues running this on macOS due to some libraries requiring the x86 architecture. Both Windows and Linux run x86.
 
 1. Clone the Github repository
-   ```bash
-   git clone https://github.com/JonOuyang/Gemini-API-Competition-Submission
-   ```
+```bash
+git clone https://github.com/JonOuyang/Gemini-API-Competition-Submission
+```
 2. Navigate to the project directory and install the required dependencies
-   ```bash
-   pip install -r requirements.txt
-   ```
-   NOTE: Depending on the environment and operating system you try to run the project on, you may have to take extra steps in installation. Please see the respective library documentations in that case, or email me at jonsouyang@gmail.com and I will do everything in my power to assist you
+```bash
+pip install -r requirements.txt
+```
+NOTE: Depending on the environment and operating system you try to run the project on, you may have to take extra steps in installation. Please see the respective library documentations in that case, or email me at jonsouyang@gmail.com and I will do everything in my power to assist you
 
 3. Go to the .env folder and replace the placeholder values with your Gemini and elevenlabs API keys and elevenlabs URL. 
 
-3. Run the main.py file
-  ```bash
-   python <main_script_name>.py
-   ```
-   NOTE: Due to the various dependencies, please allow the program about 40 seconds to complete loading all files (especially the gesture recognition and audio processing files)
+4. Run the main.py file
+```bash
+python main.py
+```
+NOTE: Due to the various dependencies, please allow the program about 40 seconds to complete loading all files (especially the gesture recognition and audio processing files)
 
 ## API Usage
 Jayu depends on only 2 APIs.
