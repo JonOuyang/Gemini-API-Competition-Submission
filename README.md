@@ -1,14 +1,14 @@
 # Introducing Jayu
 
 More than a chatbot. More than data analysis. More than an LLM. The real life Jarvis. Powered completely by Google Gemini.
-**WELCOME TO THE WORLD, JAYU**
+**WELCOME, JAYU**
 
 ## What Exactly is Jayu?
 Jayu is a an AI personal assistant that takes inspiration from the all powerful assistant Jarvis from Iron Man. Using the Google Gemini API, Jayu aims to bridge the gap between reality and fiction, giving the term "personal assistant" a new meaning. Jayu's purpose is to make the lives of users easier than ever before, with new capabilities and accessibility everywhere.
 
 Jayu is a pure python script that can run in the background of your computer while you do anything else on your desktop. It can see any window that you currently have open and active, and it can open its own chrome window to answer prompts. Jayu can manipulate current active windows as it sees fit using mouse movements and clicks, but cannot open apps on its own.
 
-![Jayu Diagram (1)](https://github.com/user-attachments/assets/46dc1a3d-ef54-46aa-9c46-fa17cd0c9d2a)
+![Jayu Diagram (2)](https://github.com/user-attachments/assets/d4545d47-3ece-438d-a891-a6d85d97fe22)
 
 **Please take a moment to look at these [important findings](https://github.com/JonOuyang/Gemini-API-Competition-Submission/blob/main/PROJECT_NOTES.md) that form the foundations of many of the features of Jayu.**
 
