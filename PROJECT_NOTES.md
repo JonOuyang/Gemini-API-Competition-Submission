@@ -16,6 +16,18 @@ This problem has been unsolved. This error appears to be somewhat random, as re-
 
 # General Prompting Techniques
 
+Gemini on its own is not very good at identifying exactly what functions to call. You have to quite literally tell Gemini **how** to think. So we include this specific phrase in the prompt:
+```
+**Carefully analyze the user's prompt: {user_prompt}. Identify what the user wants, and look at the list of given functions to determine which you should call.**
+**Write out a justification on why each particular function should or should not be called to address the prompt. Do not type this part out.**
+```
+What this does is it forces Gemini to actually acknowledge every single one of its options and evaluate them against one another. 
+
+Other Notes on Prompting:
+- JSON formatted prompts have minimal effect
+- Bolding and spacing have minimal effect
+- the longer the prompt the harder it is for Gemini to listen to instructions
+
 # Computer Vision Techniques
 
 ### General Computer Vision
