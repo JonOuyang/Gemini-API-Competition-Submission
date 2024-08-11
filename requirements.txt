@@ -1,4 +1,5 @@
 beautifulsoup4
+chardet
 enum34
 google
 google-generativeai
