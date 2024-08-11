@@ -6,7 +6,7 @@ Jayu is a an AI personal assistant that takes inspiration from the all powerful 
 
 Jayu is a pure python script that can run in the background of your computer while you do anything else on your desktop. It can see any window that you currently have open and active, and it can open its own chrome window to answer prompts. Jayu can manipulate current active windows as it sees fit using mouse movements and clicks, but cannot open apps on its own.
 
-![Jayu Diagram](https://github.com/user-attachments/assets/ea043924-1ed5-4017-b045-72fc57de1887)
+![Jayu Diagram (1)](https://github.com/user-attachments/assets/46dc1a3d-ef54-46aa-9c46-fa17cd0c9d2a)
 
 Please take a moment to look at these [important findings](https://github.com/JonOuyang/Gemini-API-Competition-Submission/blob/main/PROJECT_NOTES.md) that form the foundations of many of the features of Jayu.
 
