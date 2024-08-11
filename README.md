@@ -49,7 +49,7 @@ git clone https://github.com/JonOuyang/Gemini-API-Competition-Submission
 ```bash
 pip install -r requirements.txt
 ```
-NOTE: Depending on the environment and operating system you try to run the project on, you may have to take extra steps in installation. Please see the respective library documentations in that case, or email me at jonsouyang@gmail.com and I will do everything in my power to assist you
+NOTE: Depending on the environment and operating system you try to run the project on, you may have to take extra steps in installation. Please see the respective library documentations in that case.
 
 3. Go to the .env folder and replace the placeholder values with your Gemini and elevenlabs API keys and elevenlabs URL. 
 
