@@ -1,7 +1,8 @@
 # Introducing Jayu
 
-More than a chatbot. More than data analysis. More than an LLM. The real life Jarvis. Powered completely by Google Gemini.
-**WELCOME, JAYU**
+More than a chatbot. More than data analysis. More than an LLM. The real life Jarvis. Powered completely by Google Gemini. **WELCOME, JAYU**
+
+See our demo video HERE: https://www.youtube.com/watch?v=shnW3VerkiM 
 
 ## What Exactly is Jayu?
 Jayu is a an AI personal assistant that takes inspiration from the all powerful assistant Jarvis from Iron Man. Using the Google Gemini API, Jayu aims to bridge the gap between reality and fiction, giving the term "personal assistant" a new meaning. Jayu's purpose is to make the lives of users easier than ever before, with new capabilities and accessibility everywhere.
@@ -72,3 +73,4 @@ Jayu depends on only 2 APIs.
  
 ## Who created Jayu?
 Jayu was created by Jonathan Ouyang independently for the Google Gemini API Competition. However, after the competition submission deadline this repository was made public for others to contribute. 
+Questions? Contact me at: jonsouyang@ucla.edu
